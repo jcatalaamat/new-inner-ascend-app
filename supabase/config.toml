@@ -3,29 +3,29 @@
 project_id = "inner-ascend-app"
 
 [api]
-port = 54421
+port = 54321
 schemas = ["public", "storage"]
 extra_search_path = ["public", "extensions"]
 max_rows = 1000
 
 [db]
 # Port to use for the local database URL.
-port = 54422
+port = 54322
 # The database major version to use. This has to be the same as your remote database's. Run `SHOW
 # server_version;` on the remote database to check.
 major_version = 15
 
 [studio]
 # Port to use for Supabase Studio.
-port = 54423
+port = 54323
 
 # Email testing server. Emails sent with the local dev setup are not actually sent - rather, they
 # are monitored, and you can view the emails that would have been sent from the web interface.
 [inbucket]
 # Port to use for the email testing server web interface.
-port = 54424
-smtp_port = 54425
-pop3_port = 54426
+port = 54324
+smtp_port = 54325
+pop3_port = 54326
 
 [storage]
 # The maximum file size allowed (e.g. "5MB", "500KB").
@@ -62,7 +62,7 @@ enabled = true
 client_id = "env(GOOGLE_WEB_CLIENT_ID)"
 secret = "env(GOOGLE_SECRET)"
 # Overrides the default auth redirectUrl.
-redirect_uri = "http://127.0.0.1:54421/auth/v1/callback"
+redirect_uri = "http://127.0.0.1:54321/auth/v1/callback"
 
 # Overrides the default auth provider URL. Used to support self-hosted gitlab, single-tenant Azure,
 # or any other third-party OIDC providers.
@@ -73,8 +73,8 @@ skip_nonce_check = true
 
 [analytics]
 enabled = false
-port = 54427
-vector_port = 54428
+port = 54327
+vector_port = 54328
 # Setup BigQuery project to enable log viewer on local development stack.
 # See: https://logflare.app/guides/bigquery-setup
 gcp_project_id = ""
